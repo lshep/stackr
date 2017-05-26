@@ -59,5 +59,5 @@ stack_search <- function(intitle, tagged, nottagged, q, accepted,
             args$title <- args$intitle
         }
     }
-    do.call(stack_GET, c(list(url), args))
+    do.call(stack_GET, c(list(url), args), envir=parent.frame())
 }
